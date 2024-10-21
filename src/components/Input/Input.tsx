@@ -155,11 +155,11 @@ const Input = ({ isProcessing, setChats, socket, setIsProcessing }) => {
             style={{
               backgroundColor: "#f0f4f9",
               fontFamily: "gamay-expanded, sans-serif", // Updated to new font
-              fontWeight: 300, // Updated to new font-weight
+              fontWeight: 400, // Updated to new font-weight
               fontStyle: "normal", // Updated to normal font-style
               fontSize: "18px", // Set font-size to 18px
-              textAlign: "left"
-        
+              textAlign: "left",
+              paddingLeft: "50px",
             }}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
@@ -167,12 +167,9 @@ const Input = ({ isProcessing, setChats, socket, setIsProcessing }) => {
             className="pl-12 pr-14 py-5 !h-[60px] text-base font-light z-10 w-full !bg-[#9f9f9f] hover:!bg-[#e2e2e2] resize-none !border-none focus-visible:outline-none rounded-full focus:!bg-[#e2e2e2]"
             />
         </div>
-        <IoIosAttach
-          size={26}
-          onClick={openFileDialog}
-          className="absolute left-3 z-10 mb-2 cursor-pointer"
-        />
-
+        <svg className="absolute bottom-2.5 left-4 z-10 mb-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="33.998" height="33.998" viewBox="0 0 33.998 33.998">
+  <path id="Icon_ant-paper-clip-outlined" data-name="Icon ant-paper-clip-outlined" d="M25.875,6.528a8.032,8.032,0,0,0-11.346,0L5.864,15.187a.3.3,0,0,0,0,.425l1.225,1.225a.3.3,0,0,0,.422,0l8.666-8.659a5.692,5.692,0,1,1,8.052,8.048L15.4,25.055l-1.431,1.431a3.429,3.429,0,0,1-4.851-4.848l8.762-8.759a1.171,1.171,0,0,1,.827-.342h0a1.165,1.165,0,0,1,.82,1.989l-7.162,7.155a.3.3,0,0,0,0,.425l1.225,1.225a.3.3,0,0,0,.422,0l7.159-7.159a3.495,3.495,0,0,0,0-4.941,3.5,3.5,0,0,0-4.947,0l-.85.853L7.464,19.992a5.758,5.758,0,0,0,8.145,8.141l10.266-10.26a8.028,8.028,0,0,0,0-11.346Z" transform="translate(-7.042 16.999) rotate(-45)"/>
+</svg>
         <div className="enter-icon relative">
           <div className="z-10 flex gap-2 mb-2">
             {isProcessing ? (
@@ -203,7 +200,7 @@ const Input = ({ isProcessing, setChats, socket, setIsProcessing }) => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="39.14"
-                    height="42.987"
+                    height="35"
                     viewBox="0 0 45.14 42.987"
                   >
                     <path

@@ -18,8 +18,8 @@ import { useChatContext } from "../components/context/chat-context";
 import { ArrowDownIcon } from "lucide-react";
 import { BlueHeaderIcon } from "../components/voice-chat/chooseModel";
 
-const Chatpage = () => {
-  const [socket, setSocket] = useState(null);
+const Chatpage = ({ socket }) => {
+  // const [socket, setSocket] = useState(null);
   const [chats, setChats] = useState([]);
   const [isProcessing, setIsProcessing] = useState(false); // Tracks if AI is processing a response
   const scrollableRef = useRef(null);
@@ -29,14 +29,11 @@ const Chatpage = () => {
   const containerDev = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const newSocket = io("http://localhost:8000");
-    setSocket(newSocket);
-
-    newSocket.on("send_text_response", (data) => {
+    socket?.on("send_text_response", (data) => {
       if (data.error) {
-        console.log(data);
         return;
       }
+
       if (data.data !== null) {
         setChats((prevChats) => {
           const updatedChats = [...prevChats];
@@ -58,10 +55,10 @@ const Chatpage = () => {
       }
     });
 
-    return () => {
-      newSocket.disconnect();
-    };
-  }, []);
+    // return () => {
+    //   socket?.disconnect();
+    // };
+  }, [socket]);
 
   useEffect(() => {
     const currentLine = lineRef.current; // Store ref in a variable

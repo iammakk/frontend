@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BlueHeaderIcon } from "./chooseModel";
 
-const MiniLuminousModel = () => {
+const MiniLuminousModel = ({ socket }: { socket }) => {
   const { miniModelFirstAccess } = useChatContext();
 
   const messages = [
@@ -84,6 +84,7 @@ const MiniLuminousModel = () => {
             siriWaveLength={1000}
             fullWidthPage={true}
             isChatPage={true}
+            socket={socket}
             specificAssistantId="9b4b98ce-1e7f-49a3-8a0b-7a9befde7842"
           />
         </div>

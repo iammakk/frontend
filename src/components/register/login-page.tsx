@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Siri from "../siri/siri";
 
-const LoginPage = () => {
+const LoginPage = ({ socket }) => {
   const navigate = useNavigate();
 
   const titles = [
@@ -60,6 +60,7 @@ const LoginPage = () => {
           spinnerLocation="mx-auto top-6 right-0 left-0 absolute"
           siriWaveHeight={50}
           spinnerSize={25}
+          socket={socket}
         />
       </div>
       <div className="mx-auto grid grid-cols-[60%,40%] h-full">

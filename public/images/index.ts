@@ -24,3 +24,4 @@ export { default as ClearIcon } from "./clear-icon.svg";
 export { default as MicOnIcon } from "./mic-on-icon.svg";
 export { default as MicOffIcon } from "./mic-off-icon.svg";
 export { default as CloseCallIcon } from "./close-call-icon.svg";
+export { default as TrashIcon } from "./trash-icon.svg";

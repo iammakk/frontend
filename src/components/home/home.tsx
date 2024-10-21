@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Siri from "../siri/siri";
 
-const HomePage = () => {
+const HomePage = ({ socket }: { socket: any }) => {
   const navigate = useNavigate();
   return (
     <div className="h-screen ">
@@ -21,7 +21,7 @@ const HomePage = () => {
           </p>
 
           <div className=" absolute mx-auto right-0 left-0 top-[75px] z-20">
-            <Siri />
+            <Siri socket={socket} />
           </div>
 
           <div className="flex flex-col mt-[250px]">

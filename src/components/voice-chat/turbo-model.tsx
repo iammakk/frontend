@@ -5,7 +5,7 @@ import Siri from "../siri/siri";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const TurboLuminousModel = () => {
+const TurboLuminousModel = ({ socket }: { socket }) => {
   const {
     turboModelFirstAccess,
     finalSelectedTurboVoiceChild,
@@ -89,6 +89,7 @@ const TurboLuminousModel = () => {
               fullWidthPage={true}
               isChatPage={true}
               specificAssistantId={assistantId}
+              socket={socket}
             />
           </div>
           <div className="w-[800px] mt-16 text-left">

@@ -8,6 +8,7 @@ import {
   MicOffIcon,
   MicOnIcon,
   CloseCallIcon,
+  TrashIcon,
 } from "../../../public/images";
 
 import Spinner from "../spinner/spinner";
@@ -24,6 +25,7 @@ interface SiriProps {
   specificAssistantId?: string;
   spinnerLocation?: string;
   spinnerSize?: number;
+  socket: any;
 }
 
 const Siri: React.FC<SiriProps> = ({
@@ -35,6 +37,7 @@ const Siri: React.FC<SiriProps> = ({
   specificAssistantId = undefined,
   spinnerLocation,
   spinnerSize = 40,
+  socket,
 }) => {
   const {
     volumeLevel,
@@ -177,7 +180,7 @@ const Siri: React.FC<SiriProps> = ({
         </AnimatePresence>
         {isSessionActive && !fullWidthPage && (
           <div className=" p-2 mt-4 rounded-full">
-            <div className="flex items-center gap-20  ">
+            <div className="flex items-center gap-16">
               <div
                 className="w-10 h-10 cursor-pointer  duration-300 bg-[rgb(19,19,19)] hover:bg-[rgb(31,31,31)] flex items-center justify-center rounded-lg"
                 onClick={(e) => {
@@ -190,6 +193,14 @@ const Siri: React.FC<SiriProps> = ({
                   alt="close-call"
                   className="w-5 h-5"
                 />
+              </div>
+              <div
+                className="w-10 h-10 cursor-pointer  duration-300 bg-[rgb(19,19,19)] hover:bg-[rgb(31,31,31)] flex items-center justify-center rounded-lg"
+                onClick={() => {
+                  socket.emit("delete_chat");
+                }}
+              >
+                <img src={TrashIcon} alt="clear" className="w-5 h-5" />
               </div>
               <div
                 className="w-10 h-10 cursor-pointer bg-[#31100C] hover:bg-[#4C1812] rounded-lg duration-300 flex items-center justify-center"
@@ -217,6 +228,14 @@ const Siri: React.FC<SiriProps> = ({
                 alt="close-call"
                 className="w-5 h-5"
               />
+            </div>
+            <div
+              className="w-10 h-10 cursor-pointer  duration-300 bg-[rgb(19,19,19)] hover:bg-[rgb(31,31,31)] flex items-center justify-center rounded-lg"
+              onClick={() => {
+                socket.emit("delete_chat");
+              }}
+            >
+              <img src={TrashIcon} alt="clear" className="w-5 h-5" />
             </div>
             <div
               className="w-10 h-10 cursor-pointer bg-[#31100C] hover:bg-[#4C1812] rounded-lg duration-300 flex items-center justify-center"
