@@ -117,16 +117,8 @@ const Chatpage = ({ socket }) => {
     <div className="bg-black h-screen w-screen">
       <div className="w-full absolute top-0 left-0 p-5 flex justify-between items-center z-20">
         <div className="flex items-center gap-4">
-          <img
-            src="/public/images/chat-tab-icon.svg"
-            alt="chat-tab"
-            className="w-[22px] h-[22px]"
-          />
-          <img
-            src="/public/images/new-chat-icon.svg"
-            alt="new-chat"
-            className="w-[22px] h-[22px]"
-          />
+        <img src={ChatTabIcon} alt="chat-tab" className="w-[22px] h-[22px]" />
+        <img src={NewChatIcon} alt="new-chat" className="w-[22px] h-[22px]" />
         </div>
         <div className="bg-[#020CF5] rounded-full absolute top-5 right-5">
           <img
