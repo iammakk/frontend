@@ -1,0 +1,233 @@
+@import url("https://use.typekit.net/okx3xua.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(7, 7, 7);
+  --lk-va-bar-gap: 4px;
+  --lk-va-bar-width: 4px;
+  --lk-va-border-radius: 2px;
+  font-family: "gamay", sans-serif;
+}
+.app_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1a; /* Dark background */
+  color: #ecf0f1; /* Light text color */
+  font-family: "Roboto", sans-serif; /* Modern, clean font */
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ecf0f1; /* Light color for the title */
+  margin-bottom: 10px;
+}
+
+.main-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #bdc3c7; /* Slightly muted light gray for the subtitle */
+  margin-top: 10px;
+  margin-bottom: 30px;
+  max-width: 600px; /* Limit width for better readability */
+}
+
+.cta-button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ff8a00; /* Bright orange for contrast */
+  border: none;
+  border-radius: 30px; /* Rounded edges for a modern look */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 138, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e57b00; /* Slight darkening on hover */
+}
+
+.footer {
+  width: 100%;
+  background-color: #141414; /* Even darker background for the footer */
+  padding: 15px 0;
+  color: #95a5a6; /* Lighter gray for footer text */
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-text {
+  margin: 5px 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.header svg {
+  height: 40px; /* Adjust size of the logo */
+  width: 40px;
+  fill: #ff8a00; /* Matching the logo color to the button */
+}
+.cursor-animation {
+  animation: fadeIn 0.5s ease-in-out alternate-reverse infinite;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Even lighter grey thumb on hover */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px hsla(0, 0%, 100%, 0.3),
+      0 0 20px hsla(0, 0%, 100%, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px hsla(0, 0%, 100%, 1), 0 0 30px hsla(0, 0%, 100%, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 10px hsla(0, 0%, 100%, 0.3),
+      0 0 20px hsla(0, 0%, 100%, 0.5);
+  }
+}
+
+@keyframes glowHover {
+  0% {
+    box-shadow: 0 0 5px hsla(0, 0%, 50%, 0.3), 0 0 20px hsla(0, 0%, 100%, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 1px hsla(0, 0%, 50%, 1), 0 0 30px hsla(0, 0%, 100%, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px hsla(0, 0%, 50%, 0.3), 0 0 20px hsla(0, 0%, 100%, 0.5);
+  }
+}
+
+.glowHover:hover {
+  border: 1px solid transparent; /* Adjust border width as needed */
+  animation: glowHover 2s infinite alternate;
+}
+
+.glow {
+  animation: glow 2s infinite alternate;
+}
+
+.css-9uhuad {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 9.600000000000001px;
+  height: 9.600000000000001px;
+  border-radius: 0px;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  background: #06b7db;
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  -webkit-transition: opacity 0.2s ease-out, background 0.75s ease-out;
+  transition: opacity 0.2s ease-out, background 0.75s ease-out;
+}
+.css-18nqejf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #06b7db;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 0px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  transition-delay: 0.4s;
+}
+.spinner {
+  display: inline-block;
+  border-radius: 50%;
+  border-width: 5px;
+  border-style: solid;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .main-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
